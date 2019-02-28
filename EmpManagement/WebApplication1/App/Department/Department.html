@@ -1,0 +1,53 @@
+﻿
+<div class="row">
+    <h1>Department</h1>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-4">
+            <input type="button" class="btn btn-primary" ng-click="btnAddNewDept()" value="Add New" />
+            <input type="button" class="btn btn-default" ng-click="btnShowList()" value="Show List" />
+        </div>
+    </div>
+</div>
+
+
+<div style="margin-top:10px;" ng-if="dispDeptInfo">
+    <div class="row">
+        <div class="col-md-12">
+            <table id="dispDeptData" class="table table-bordered table-hover table-responsive">
+                <thead>
+                    <tr>
+                        <th>Department Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody ng-repeat="depData in dispDeptTableData">
+                    <tr>
+                        <td>{{depData.DeptName}}</td>
+                        <td id="{{depData.DeptId}}">
+                            <i class="glyphicon glyphicon-edit" ng-click="GetEditDeptDataOnId(depData.DeptId)"></i>
+                            <i class="glyphicon glyphicon-remove-circle" ng-click="DeleteDeptOnId(depData.DeptId)"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div style="margin-top:10px;" ng-if="!dispDeptInfo">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Department Name</label>
+                    <input type="text" id="txtDeptName" class="form-control" ng-model="Department.DeptName" placeholder="Department Name" />
+                </div>
+            </div>
+            <div class="col-md-3" style="margin-top:24px;">
+                <input type="button" class="btn btn-primary" id="btnSaveDeptInfo" ng-click="btnSaveDeptInfo()" value="Save" />
+            </div>
+        </div>
+    </div>
+</div>

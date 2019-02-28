@@ -1,0 +1,101 @@
+﻿
+<div class="row">
+    <h1>Employee</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-4">
+            <input type="button" class="btn btn-primary" ng-click="btnAddNewEmp()" value="Add New" />
+            <input type="button" class="btn btn-default" ng-click="btnShowList()" value="Show List" />
+        </div>
+    </div>
+</div>
+
+<div style="margin-top:10px;" ng-if="dispEmpInfo">
+    <div class="row">
+        <div class="col-md-12">
+            <table id="dispEmpData" class="table table-bordered table-hover table-responsive">
+                <thead>
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Qualification</th>
+                        <th>Department</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody ng-repeat="EmpData in EmpDispLoadData">
+                    <tr>
+                        <td>{{EmpData.EmpName}}</td>
+                        <td>{{EmpData.Qualification}}</td>
+                        <td>{{EmpData.DeptName}}</td>
+                        <td id="{{EmpData.EmpId}}">
+                            <i class="glyphicon glyphicon-edit" ng-click="GetEditEmpDataOnId(EmpData.EmpId)"></i>
+                            <i class="glyphicon glyphicon-remove-circle" ng-click="DeleteEmpOnId(EmpData.EmpId)"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div style="margin-top:10px;" ng-if="!dispEmpInfo">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Employee Name</label>
+                    <input type="text" id="txtEmpName" class="form-control" ng-model="Employee.EmpName" placeholder="Employee Name" />
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Surname</label>
+                    <input type="text" id="txtEmpSurName" class="form-control" ng-model="Employee.EmpSurname" placeholder="Surname" />
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Address</label>
+                    <input type="text" id="txtEmpAddress" class="form-control" ng-model="Employee.Address" placeholder="Address" />
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Qualification</label>
+                    <input type="text" id="txtQualification" class="form-control" ng-model="Employee.Qualification" placeholder="Qualification" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>ContactNumber</label>
+                    <input type="text" id="txtContactNumber" onkeypress="return isNumber(event);" class="form-control" ng-model="Employee.ContactNumber" placeholder="ContactNumber" />
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label>Department</label>
+                    <select id="ddlDeptId" class="form-control" ng-model="Employee.DeptId" ng-options="x.DeptId as x.DeptName for x in DepartmentNameList">
+                        <option value="">Select Department</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-md-3" style="margin-top:24px;">
+                <input type="button" class="btn btn-primary" id="btnSaveDeptInfo" ng-click="btnSaveEmpInfo()" value="Save" />
+            </div>
+        </div>
+    </div>
+
+</div>

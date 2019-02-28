@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html ng-app="Angularapp">
+<head>
+    <meta charset="utf-8" />
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Content/DataTables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="/Content/CommonStyle.css" rel="stylesheet" />
+    <title>Employee Management</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" ui-sref="#">Employee Management</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a ui-sref="Home">Home</a></li>
+                    <li><a ui-sref="Department">Department</a></li>
+                    <li><a ui-sref="Employee">Employee</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="main" class="container">
+        <div ui-view></div>
+    </div>
+</body>
+</html>
+
+<script src="/Scripts/jquery-3.3.1.min.js"></script>
+<script src="/Scripts/angular.min.js"></script>
+<script src="/Scripts/angular-ui-router.min.js"></script>
+<script src="/Scripts/DataTables/jquery.dataTables.min.js"></script>
+<script src="/App/app.js"></script>
+<script src="/Scripts/ocLazyLoad.js"></script>
+<script src="/Scripts/Common.js"></script>
+
+
+<!--<script src="/Scripts/JqueryDataTable/jquery.dataTables.min.js"></script>-->
+<!--<script src="/Scripts/JqueryDataTable/dataTables.bootstrap.min.js"></script>-->
+<!--<script src="/Scripts/JqueryDataTable/dataTables.material.min.js"></script>-->
+<!--<script src="/Scripts/jquery-3.3.1.min.js"></script>
+<script src="/Scripts/bootstrap.min.js"></script>-->
+<!--<script src="/Scripts/angular-route.js"></script>-->
+<!--<script src="/App/LayoutController.js"></script>-->

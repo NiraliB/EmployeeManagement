@@ -1,0 +1,12 @@
+C:\Nirali\EmployeeManagement\EmpManagement\EmployeeModels\bin\Debug\EmployeeModels.dll.config
+C:\Nirali\EmployeeManagement\EmpManagement\EmployeeModels\bin\Debug\EmployeeModels.dll
+C:\Nirali\EmployeeManagement\EmpManagement\EmployeeModels\bin\Debug\EmployeeModels.pdb
+C:\Nirali\EmployeeManagement\EmpManagement\EmployeeModels\bin\Debug\EntityFramework.dll
+C:\Nirali\EmployeeManagement\EmpManagement\EmployeeModels\bin\Debug\EntityFramework.SqlServer.dll
+C:\Nirali\EmployeeManagement\EmpManagement\EmployeeModels\bin\Debug\EntityFramework.xml
+C:\Nirali\EmployeeManagement\EmpManagement\EmployeeModels\bin\Debug\EntityFramework.SqlServer.xml
+C:\Nirali\EmployeeManagement\EmpManagement\EmployeeModels\obj\Debug\EmployeeModels.csprojAssemblyReference.cache
+C:\Nirali\EmployeeManagement\EmpManagement\EmployeeModels\obj\Debug\EmployeeModels.csproj.CoreCompileInputs.cache
+C:\Nirali\EmployeeManagement\EmpManagement\EmployeeModels\obj\Debug\EmployeeModels.csproj.CopyComplete
+C:\Nirali\EmployeeManagement\EmpManagement\EmployeeModels\obj\Debug\EmployeeModels.dll
+C:\Nirali\EmployeeManagement\EmpManagement\EmployeeModels\obj\Debug\EmployeeModels.pdb
